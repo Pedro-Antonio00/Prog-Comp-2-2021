@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo 2</title>
+        <style>
+            /* CSS */
+            #Formulario {
+                outline: rgb(91, 248, 1) 2px solid; /*borda externa azul de 2px*/
+                padding: 20px; /*espaçamento interno*/
+                width: 600px; /*largura do formulario*/
+                margin: 40px auto; /*margem externa*/    
+            }
+            /*regra se aplica apenas ao elemento ul dentro do menu*/
+            #menu ul {
+                padding: 10px; /*espaçamento interno*/
+                margin: 10px auto; /*espaçamento externo da lista*/
+                background-color: rgb(36, 199, 118); /*cor de fundo da lista*/
+                list-style: none; /*lista não tera "bolinhas" */
+                width: 1200px;
+            }
+            /*itens da lista*/
+            #menu ul li {
+                display: inline; /*os itens ficarão em uma unica linha*/
+                padding: 30px; /*espaçamento interno entre os itens*/
+            }
+            #menu ul li a {
+                background-color: rgb(253, 253, 253); /*cor de fundo*/
+                color: black; /*cor do texto*/
+                text-decoration: none; /*sem sublinhado*/
+                border-bottom: 3px solid rgb(6, 153, 0); /*borda em baixo com sistema de cores*/
+            }
+            #p1, #p2, #comb {
+                padding: 10px;
+            }
+        </style>
+        <script type="text/javascript" src="js/viagem.js"></script>
+    </head>
+    <body>
+        <nav  id="menu"> <!-- menu de navegação -->
+            <ul> <!-- unorde list (lista não ordenada)-->
+                <!-- a significa âncora (link) -->
+                <li> <a href="home.html">Home</a> </li> <!-- list item-->
+                <li> <a href ="imc.html">Calculadora IMC</a> </li>
+                <li> <a href ="viagem.html">Custo de viagem</a> </li>
+                <li> <a href ="about.html">About</a> </li>
+                <li> <a href="galeria.html">Galeria de imagens</a> </li>
+                <li><a href="videos.html">videos do Youtube</a></li>
+                <li><a href="tabela.html">Tabela nutricional</a></li>
+            </ul>
+        </nav>
+        <div id="Formulario">
+            <h2>Custo de viagem</h2><hr>
+            <div id="p1">
+                <label for="pedagio1">Pedágio 1</label>
+                <input type="number" id="pedagio1" placeholder="Valor do primeiro pedágio"/>
+            </div>
+            <div id="p2">
+                <label for="pedagio2">Pedágio 2</label>
+                <input type="number" id="pedagio2" placeholder="Valor do segundo pedágio"/>
+            </div>
+            <div id="comb">
+                <label for="combustivel">Combustível</label>
+                <input type="number" id="combustivel" placeholder="Valor do combustível" />
+            </div>
+            <div id="botao2">
+                <button onClick="calcular()" type="button">Calcular</button>
+            </div>
+        </div>
+    </body>
+</html>

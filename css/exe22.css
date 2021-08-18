@@ -1,0 +1,25 @@
+#conteudo {
+    margin: 0px auto;
+    padding: 20px;
+    background-color: greenyellow;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+#p1{
+    margin: 0px auto;
+    padding: 2px;
+}
+#i1{
+    margin: 0px auto;
+    padding: 2px;
+}
+input{
+    width: 50px;
+}
+#peso{
+    margin-left: 6px;
+}
+#botao{
+    text-align: center;
+}

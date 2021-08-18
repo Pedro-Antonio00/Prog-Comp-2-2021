@@ -1,0 +1,10 @@
+/* CSS */
+            /*regra se aplica apenas ao elemento ul dentro do menu*/
+            #caixa {
+                background-color: lightblue;
+                width: 300px;
+                border: 15px solid black;
+                padding: 50px;
+                margin: 50px auto;
+
+            }

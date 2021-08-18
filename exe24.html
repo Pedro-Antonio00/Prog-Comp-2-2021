@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/exe24.js"></script>
+        <link rel="stylesheet" href="css/exe24.css">
+    </head>
+    <body>
+        <div id="conteudo">
+            <div id="val">
+                <label for="valor">Preço:</label>
+                <input type="number" id="valor">R$
+            </div>
+            <div id="cate">
+                <label for="Categoria">categoria:</label>
+                <select id="categoria">
+                    <option value="l">Limpeza</option>
+                    <option value="a">Alimentação</option>
+                    <option value="v">Vestuário</option>
+                </select>
+            </div>
+            <div  id="refri">
+                <label for="situacao">Situação:</label>
+                <!--cria uma aba de seleção que possibilita o usuario selecionar a opção que deseja, atribuindo um valor a essa opção-->
+                <select id="situacao">
+                    <option value="r">Necessita de refrigeração</option>
+                    <option value="n">Não necessita de refrigeração</option>
+                </select>
+            </div>
+            <div>
+                <button type="button" onclick="cal()">Calcule</button>
+            </div>
+            <div id="result">
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo 2</title>
+        <style>
+            /* CSS */
+            /*regra se aplica apenas ao elemento ul dentro do menu*/
+            #menu ul {
+                padding: 10px; /*espaçamento interno*/
+                margin: 10px auto; /*espaçamento externo da lista*/
+                background-color: rgb(67, 238, 153); /*cor de fundo da lista*/
+                list-style: none; /*lista não tera "bolinhas" */
+                width: 1200px;
+            }
+            /*itens da lista*/
+            #menu ul li {
+                display: inline; /*os itens ficarão em uma unica linha*/
+                padding: 30px; /*espaçamento interno entre os itens*/
+            }
+            #menu ul li a {
+                background-color: rgb(253, 253, 253); /*cor de fundo*/
+                color: black; /*cor do texto*/
+                text-decoration: none; /*sem sublinhado*/
+                border-bottom: 3px solid rgb(6, 122, 2); /*borda em baixo com sistema de cores*/
+            }    
+            #conteudo {
+                width: 800px;
+                margin: 50px auto;
+            }
+            #tabela {
+                font-family: Arial, Helvetica, sans-serif; /* tipo de fonte */
+                width: 100%; /* ocupa 100% dos 800px */
+                border-collapse: collapse; /*tira os espaços entre as células*/ 
+                background-color: slateblue;
+                color: white;
+            }
+            td, th {
+                border: 1px solid #ddd;
+                padding: 10px;
+            } 
+            h2 {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(146, 7, 7);
+            }
+            th {
+                background-color:  rgb(67, 238, 153);
+                color: black;
+            }
+            tr:hover {/*quando passar o mouse em cima da linha*/
+                background-color: yellow;
+                color: black;
+            }
+            .menususpenso{
+                position: relative; /*conteudo atual acompanha conteudo da pág*/
+                display: inline-block;/*mostra conteudo em unica linha*/
+                
+            }
+            .conteudomenususpenso{
+                position: absolute;/*não acompanha o conteudo da pág, o conteudo q vem dps não é interferido*/
+                display: none;/*faz desaparecer ate algo aocntecer*/
+                background-color: yellow;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgb(0,0,0,2);/*caixinha com sombra*/
+            }
+            .menususpenso:hover .conteudomenususpenso{
+                display: block;/*coloca pra mostra*/
+            }
+            .conteudomenususpenso a{
+                display: block;/*mostra em uma unica linha*/
+                padding: 8px;
+                text-decoration: none;/*tira sublinhado*/
+            }
+        </style>
+    </head>
+    <body>
+        <nav  id="menu"> <!-- menu de navegação -->
+            <ul> <!-- unorde list (lista não ordenada)-->
+                <!-- a significa âncora (link) -->
+                <li> <a href="home.html">Home</a> </li> <!-- list item-->
+                <li><a href="imc.html">Imc</a></li>
+                <li> <a href ="viagem.html">Custo de viagem</a> </li>
+                <li> <a href ="about.html">Sobre</a> </li>
+                <li> <a href="galeria.html">Galeria de imagens</a> </li>
+                <li><a href="videos.html">videos do Youtube</a></li>
+                <li><a href="tabela.html">Tabela nutricional</a></li>
+                <li>
+                    <div class="menususpenso">
+                        Calcular IMC
+                        <div class="conteudomenususpenso">
+                            <a href="imc-homem.html">Homem</a>
+                            <a href="imc-mulher.html">Mulher</a>    
+                        </div>
+                    </div>
+                </li> 
+            </ul>
+        </nav>
+        <div id="conteudo">
+            <h2>Games</h2>
+            <table id="tabela"> <!-- tabela-->
+                <tr><!--cria uma linha-->
+                    <th><!-- cabeçalho-->
+                        Nome do jogo
+                    </th>
+                    <th>
+                        Site do jogo
+                    </th>
+                    <th>
+                        Tipo do jogo
+                    </th>
+                </tr>
+                <tr>
+                    <td><!-- cria célula-->
+                        GTA
+                    </td>
+                    <td><a href="https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v">https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v</a></td>
+                    <td>Jogo maldoso</td>
+                </tr>
+                <tr>
+                    <td>Fortinite</td>
+                    <td><a href="https://www.epicgames.com/fortnite/pt-BR/home">https://www.epicgames.com/fortnite/pt-BR/home</a></td>
+                    <td>Battle Royale</a></td>
+                </tr>
+                <tr>
+                    <td>Rocket League</td>
+                    <td><a href="https://www.rocketleague.com/pt-br/">https://www.rocketleague.com/pt-br/</a></td>
+                    <td>Esporte</td>
+                </tr>
+            </table>
+            
+        </div>
+    </body>
+</html>
